@@ -8,7 +8,7 @@ public class CropRatio {
         Integer currentCropWeight = crops.get(name);
 
         if (currentCropWeight == null) {
-            crops.put(name, currentCropWeight);
+            crops.put(name, null);
             totalWeight = cropWeight;
         } else {
             totalWeight = currentCropWeight + cropWeight;

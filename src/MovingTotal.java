@@ -7,7 +7,7 @@ public class MovingTotal {
     int temp = 0;
 
     /**
-     * Adds/appends list of integers at the end of internal list.
+     * Adds/appends a list of integers at the end of internal list.
      */
     public void append(int[] list) {
         for (int i = 0; i < list.length; i++) {
