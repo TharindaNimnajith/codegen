@@ -1,5 +1,5 @@
-import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Collection;
 
 class LanguageStudent {
     private final Collection<String> languages = new ArrayList<>();
@@ -14,16 +14,6 @@ class LanguageStudent {
 }
 
 public class LanguageTeacher extends LanguageStudent {
-    @SuppressWarnings({"SameParameterValue", "UnusedReturnValue"})
-    private boolean teach(LanguageStudent student, String language) {
-        if (student.getLanguages().contains(language)) {
-            student.addLanguage(language);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public static void main(String[] args) {
         LanguageTeacher teacher = new LanguageTeacher();
         teacher.addLanguage("English");
@@ -33,6 +23,16 @@ public class LanguageTeacher extends LanguageStudent {
 
         for (String language : student.getLanguages()) {
             System.out.println(language);
+        }
+    }
+
+    @SuppressWarnings({"SameParameterValue", "UnusedReturnValue"})
+    private boolean teach(LanguageStudent student, String language) {
+        if (student.getLanguages().contains(language)) {
+            student.addLanguage(language);
+            return true;
+        } else {
+            return false;
         }
     }
 }

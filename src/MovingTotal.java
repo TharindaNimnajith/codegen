@@ -6,6 +6,24 @@ public class MovingTotal {
     int count = 0;
     int temp = 0;
 
+    public static void main(String[] args) {
+        MovingTotal movingTotal = new MovingTotal();
+
+        movingTotal.append(new int[]{1, 2, 3, 4});
+
+        System.out.println(movingTotal.contains(6));
+        System.out.println(movingTotal.contains(9));
+        System.out.println(movingTotal.contains(12));
+        System.out.println(movingTotal.contains(7));
+
+        movingTotal.append(new int[]{5});
+
+        System.out.println(movingTotal.contains(6));
+        System.out.println(movingTotal.contains(9));
+        System.out.println(movingTotal.contains(12));
+        System.out.println(movingTotal.contains(7));
+    }
+
     /**
      * Adds/appends a list of integers at the end of internal list.
      */
@@ -30,23 +48,5 @@ public class MovingTotal {
      */
     public boolean contains(int total) {
         return numbers.contains(total);
-    }
-
-    public static void main(String[] args) {
-        MovingTotal movingTotal = new MovingTotal();
-
-        movingTotal.append(new int[]{1, 2, 3, 4});
-
-        System.out.println(movingTotal.contains(6));
-        System.out.println(movingTotal.contains(9));
-        System.out.println(movingTotal.contains(12));
-        System.out.println(movingTotal.contains(7));
-
-        movingTotal.append(new int[]{5});
-
-        System.out.println(movingTotal.contains(6));
-        System.out.println(movingTotal.contains(9));
-        System.out.println(movingTotal.contains(12));
-        System.out.println(movingTotal.contains(7));
     }
 }
